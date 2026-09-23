@@ -36,10 +36,8 @@ static inline void DecreaseYAxis(const int input, int* y_axis_values, int* adv) 
 void Graph_init(graph_t* graph, int x, int y) {
 	graph->x = x;
 	graph->y = y;
-	for (int i = 0; i < 6; ++i) {
-		printf("%d\n", i);
+	for (int i = 0; i < 6; ++i)
 		graph->y_axis_values[i] = i;
-	}
 }
 
 void Graph_logic(graph_t* graph, const int value) {
