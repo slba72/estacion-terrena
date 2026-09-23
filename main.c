@@ -1,4 +1,3 @@
-// !!! NO ES EL CODIGO FINAL!!!
 #include "raylib.h"
 #include "font.h"
 #include "graph.h"
@@ -21,7 +20,10 @@ int main() {
 	int input2 = 0;
 	//input = GetRandomValue(20, 25); //20, 24 // 50, 54
 	while(!WindowShouldClose()){
-		++time;
+		INCREASE_TIME(time);
+
+		//(time == 1) ? (time = 0) : (++time);
+
 		//input = GetRandomValue(20, 25); //20, 24 // 50, 54
 		//printf("%d\n", input);
 		//Graph_logic(&s1, GetRandomValue(2, 4));
@@ -37,8 +39,7 @@ int main() {
 		Graph_logic(&graph1, input);
 		Graph_logic(&graph2, input2);
 
-		if (time == 1)
-			time = 0;
+		CHECK_TIME();
 
 		BeginDrawing();
 		ClearBackground(WHITE);
