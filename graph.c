@@ -13,7 +13,8 @@
 #define POINT_R 5.0f
 
 static int x_axis_values[6] = { 0, 1, 2, 3, 4, 5 };
-long point_i = 0;
+unsigned char point_i = 0; 
+// long point_i
 
 // macro??
 static inline void IncreaseYAxis(const int input, int* y_axis_values, int* adv) {
